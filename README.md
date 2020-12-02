@@ -1,6 +1,5 @@
 <div style="text-align: center;">
-Advent of Code 2020
--------------------
+<h1>Advent of Code 2020</h1>
 </div>
 
 ## About Advent of Code
