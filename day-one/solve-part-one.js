@@ -5,14 +5,15 @@ const readline = require('readline');
 const DEBUG = false;
 
 if (argv.length !== 3) {
-    usage();
+    usage(argv);
     process.exit(1);
 } else {
     run(argv);
 }
 
 function usage() {
-    return 'node solve.js <input file>';
+    const filePath = path.relative(__dirname, argv[1]);
+    console.log(`node ${argv[1]} <input file>`);
 }
 
 async function run(args) {

@@ -11,4 +11,10 @@
 
 ## My Attempts
 
-Day One [part one (JS)](./day-one/solve-part-one.js) and [part two (JS)](./day-one/solve-part-two.js).
+### Day 1: Report Repair
+
+[Part one (JS)](./day-one/solve-part-one.js) and [part two (JS)](./day-one/solve-part-two.js)
+
+### Day 2: Password Philosophy
+
+[Part one (JS)](./day-two/solve-part-one.js) and [part two (JS)](./day-two/solve-part-two.js)

@@ -13,14 +13,14 @@ if (argv.length !== 3) {
 
 function usage() {
     const filePath = path.relative(__dirname, argv[1]);
-    console.log(`node ${argv[1]} <input file>`);
+    console.log(`node ${filePath} <input file>`);
 }
 
 async function run(args) {
     const filePath = path.resolve(__dirname, args[2]);
     const input = await readFile(filePath);
-    const goal = 2020;
-    const result = solve(goal, input);
+    debug(input);
+    const result = solve(input);
     print(result);
 }
 
@@ -31,8 +31,8 @@ function readFile(filePath) {
         });
         const input = [];
         readInterface.on('line', line => {
-            debug(line);
-            input.push(Number.parseInt(line));
+            const item = parseLine(line);
+            input.push(item);
         });
         readInterface.on('close', () => {
             debug('done reading lines', input);
@@ -41,23 +41,37 @@ function readFile(filePath) {
     })
 }
 
-function solve(goal, input) {
-    for (let i = 0; i < input.length; i++) {
-        for (let j = i + 1; j < input.length; j++) {
-            let first = input[i], second = input[j];
+function parseLine(line) {
+    const parts = line.split(' ');
+    const range = parts[0].split('-').map(n => Number.parseInt(n));
+    debug(range, parts[0].split('-'))
+    const char = parts[1][0];
+    const value = parts[2];
 
-            if (first + second >= goal) continue;
-            
-            for (let k = j + 1; k < input.length; k++) {
-                let third = input[k];
-                if (first + second + third === goal) {
-                    return first * second * third;
-                }
-            }
+    return { range, char, value };
+}
+
+function solve(input) {
+    const result = input.reduce((numValid, { range, char, value }) => {
+        const indices = range
+            .filter(index => index <= value.length)
+            .map(index => value[index - 1] === char);
+
+        if (xor.apply(null, indices)) {
+            debug(value, range, char, indices, "valid")
+            return numValid + 1;
+        } else {
+            return numValid;
         }
-    }
+    }, 0);
 
-    return -1;
+    return result;
+}
+
+function xor(a, b) {
+    if (a && !b) return true;
+    if (!a && b) return true;
+    return false;
 }
 
 function print(result) {

@@ -19,8 +19,8 @@ function usage() {
 async function run(args) {
     const filePath = path.resolve(__dirname, args[2]);
     const input = await readFile(filePath);
-    const goal = 2020;
-    const result = solve(goal, input);
+    debug(input);
+    const result = solve(input);
     print(result);
 }
 
@@ -31,8 +31,8 @@ function readFile(filePath) {
         });
         const input = [];
         readInterface.on('line', line => {
-            debug(line);
-            input.push(Number.parseInt(line));
+            const item = parseLine(line);
+            input.push(item);
         });
         readInterface.on('close', () => {
             debug('done reading lines', input);
@@ -41,23 +41,38 @@ function readFile(filePath) {
     })
 }
 
-function solve(goal, input) {
-    for (let i = 0; i < input.length; i++) {
-        for (let j = i + 1; j < input.length; j++) {
-            let first = input[i], second = input[j];
+function parseLine(line) {
+    const parts = line.split(' ');
+    const range = parts[0].split('-').map(n => Number.parseInt(n));
+    debug(range, parts[0].split('-'))
+    const char = parts[1][0];
+    const value = parts[2];
 
-            if (first + second >= goal) continue;
-            
-            for (let k = j + 1; k < input.length; k++) {
-                let third = input[k];
-                if (first + second + third === goal) {
-                    return first * second * third;
-                }
+    return { range, char, value };
+}
+
+function solve(input) {
+    const result = input.reduce((numValid, { range, char, value }) => {
+        const min = range[0], max = range[1];
+        let numOccurences = 0;
+        for (let i = 0; i < value.length; i++) {
+            if (value[i] === char) {
+                numOccurences++;
+            }
+
+            if (numOccurences > max) {
+                break;
             }
         }
-    }
 
-    return -1;
+        if (min <= numOccurences && numOccurences <= max) {
+            return numValid + 1;
+        } else {
+            return numValid;
+        }
+    }, 0);
+
+    return result;
 }
 
 function print(result) {
