@@ -13,7 +13,7 @@ if (argv.length !== 3) {
 
 function usage() {
     const filePath = path.relative(__dirname, argv[1]);
-    console.log(`node ${argv[1]} <input file>`);
+    console.log(`node ${filePath} <input file>`);
 }
 
 async function run(args) {
