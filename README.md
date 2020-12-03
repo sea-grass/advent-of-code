@@ -13,8 +13,12 @@
 
 ### Day 1: Report Repair
 
-[Part one (JS)](./day-one/solve-part-one.js) and [part two (JS)](./day-one/solve-part-two.js)
+[Part one (JS)](./day-1/solve-part-one.js) and [part two (JS)](./day-1/solve-part-two.js)
 
 ### Day 2: Password Philosophy
 
-[Part one (JS)](./day-two/solve-part-one.js) and [part two (JS)](./day-two/solve-part-two.js)
+[Part one (JS)](./day-2/solve-part-one.js) and [part two (JS)](./day-2/solve-part-two.js)
+
+### Day 3: Toboggan Trajectory
+
+[Part one (JS)](./day-3/solve-part-one.js) and [part two (JS)](./day-3/solve-part-two.js)

@@ -13,7 +13,7 @@ if (argv.length !== 3) {
 
 function usage() {
     const filePath = path.relative(__dirname, argv[1]);
-    console.log(`node ${argv[1]} <input file>`);
+    console.log(`node ${filePath} <input file>`);
 }
 
 async function run(args) {
@@ -30,9 +30,20 @@ function readFile(filePath) {
             input: fs.createReadStream(filePath)
         });
         const input = [];
+        let numLinesRead = 0;
+        let scanIndex = 3;
         readInterface.on('line', line => {
-            const item = parseLine(line);
+            // skip the first line
+            if (numLinesRead === 0) {
+                numLinesRead++;
+                return;
+            }
+
+            const item = line[scanIndex % line.length];
             input.push(item);
+
+            scanIndex += 3;
+            numLinesRead++;
         });
         readInterface.on('close', () => {
             debug('done reading lines', input);
@@ -41,35 +52,10 @@ function readFile(filePath) {
     })
 }
 
-function parseLine(line) {
-    const parts = line.split(' ');
-    const range = parts[0].split('-').map(n => Number.parseInt(n));
-    debug(range, parts[0].split('-'))
-    const char = parts[1][0];
-    const value = parts[2];
-
-    return { range, char, value };
-}
-
 function solve(input) {
-    const result = input.reduce((numValid, { range, char, value }) => {
-        const min = range[0], max = range[1];
-        let numOccurences = 0;
-        for (let i = 0; i < value.length; i++) {
-            if (value[i] === char) {
-                numOccurences++;
-            }
-
-            if (numOccurences > max) {
-                break;
-            }
-        }
-
-        if (min <= numOccurences && numOccurences <= max) {
-            return numValid + 1;
-        } else {
-            return numValid;
-        }
+    const result = input.reduce((numTrees, curr) => {
+        if (curr === '#') return numTrees + 1;
+        else return numTrees;
     }, 0);
 
     return result;
