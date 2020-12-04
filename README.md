@@ -5,9 +5,8 @@
 ## About Advent of Code
 
 > Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like.
-[^1]
 
-[^1]: [https://adventofcode.com/](https://adventofcode.com/)
+[https://adventofcode.com/](https://adventofcode.com/)
 
 ## My Attempts
 
@@ -22,3 +21,7 @@
 ### Day 3: Toboggan Trajectory
 
 [Part one (JS)](./day-3/solve-part-one.js) and [part two (JS)](./day-3/solve-part-two.js)
+
+### Day 4: Passport Processing
+
+[Part one (JS)](./day-4/solve-part-one.js) and [part two (JS)](./day-4/solve-part-two.js)
