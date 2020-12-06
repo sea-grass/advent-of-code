@@ -25,3 +25,7 @@
 ### Day 4: Passport Processing
 
 [Part one (JS)](./day-4/solve-part-one.js) and [part two (JS)](./day-4/solve-part-two.js)
+
+### Day 5: Binary Boarding
+
+[Part one (JS)](./day-5/part-one.js) and [part two (JS)](./day-5/part-two.js)
