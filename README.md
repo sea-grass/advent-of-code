@@ -29,3 +29,7 @@
 ### Day 5: Binary Boarding
 
 [Part one (JS)](./day-5/part-one.js) and [part two (JS)](./day-5/part-two.js)
+
+### Day 6: Custom Customs
+
+[Part one (JS)](./day-6/part-one.js) and [part two (JS)](./day-6/part-two.js)
