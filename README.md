@@ -19,3 +19,4 @@ See: [https://adventofcode.com/](https://adventofcode.com/)
 | 05 | Binary Boarding | [part one (JS)](./day-05/part-one.js) | [part two (JS)](./day-05/part-two.js) | [Problem Description](https://adventofcode.com/2020/day/5) |
 | 06 | Custom Customs | [part one (JS)](./day-06/part-one.js) | [part two (JS)](./day-06/part-two.js) | [Problem Description](https://adventofcode.com/2020/day/6) |
 | 07 | Handy Haversacks | [part one (JS)](./day-07/part-one.js) | [part two (JS)](./day-07/part-two.js) | [Problem Description](https://adventofcode.com/2020/day/7) |
+| 08 | Handheld Halting | [part one (JS)](./day-08/part-one.js) | [part two (JS)](./day-08/part-two.js) | [Problem Description](https://adventofcode.com/2020/day/8) |
