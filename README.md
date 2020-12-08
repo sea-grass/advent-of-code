@@ -12,10 +12,10 @@ See: [https://adventofcode.com/](https://adventofcode.com/)
 
 | Day | Name | Part One | Part Two |
 | --- | --- | --- | --- |
-| 01 | Report Repair | [Part one (JS)](./day-1/solve-part-one.js) | [part two (JS)](./day-1/solve-part-two.js) |
-| 02 | Password Philosophy | [Part one (JS)](./day-2/solve-part-one.js) | [part two (JS)](./day-2/solve-part-two.js) |
-| 03 | Toboggan Trajectory | [Part one (JS)](./day-3/solve-part-one.js) | [part two (JS)](./day-3/solve-part-two.js) |
-| 04 | Passport Processing | [Part one (JS)](./day-4/solve-part-one.js) | [part two (JS)](./day-4/solve-part-two.js) |
-| 05 | Binary Boarding | [Part one (JS)](./day-5/part-one.js) | [part two (JS)](./day-5/part-two.js) |
-| 06 | Custom Customs | [Part one (JS)](./day-6/part-one.js) | [part two (JS)](./day-6/part-two.js) |
-| 07 | Handy Haversacks | [Part one (JS)](./day-7/part-one.js) | [part two (JS)](./day-7/part-two.js) |
+| 01 | Report Repair | [Part one (JS)](./day-01/solve-part-one.js) | [part two (JS)](./day-01/solve-part-two.js) |
+| 02 | Password Philosophy | [Part one (JS)](./day-02/solve-part-one.js) | [part two (JS)](./day-02/solve-part-two.js) |
+| 03 | Toboggan Trajectory | [Part one (JS)](./day-03/solve-part-one.js) | [part two (JS)](./day-03/solve-part-two.js) |
+| 04 | Passport Processing | [Part one (JS)](./day-04/solve-part-one.js) | [part two (JS)](./day-04/solve-part-two.js) |
+| 05 | Binary Boarding | [Part one (JS)](./day-05/part-one.js) | [part two (JS)](./day-05/part-two.js) |
+| 06 | Custom Customs | [Part one (JS)](./day-06/part-one.js) | [part two (JS)](./day-06/part-two.js) |
+| 07 | Handy Haversacks | [Part one (JS)](./day-07/part-one.js) | [part two (JS)](./day-07/part-two.js) |
