@@ -6,30 +6,16 @@
 
 > Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like.
 
-[https://adventofcode.com/](https://adventofcode.com/)
+See: [https://adventofcode.com/](https://adventofcode.com/)
 
 ## My Attempts
 
-### Day 1: Report Repair
-
-[Part one (JS)](./day-1/solve-part-one.js) and [part two (JS)](./day-1/solve-part-two.js)
-
-### Day 2: Password Philosophy
-
-[Part one (JS)](./day-2/solve-part-one.js) and [part two (JS)](./day-2/solve-part-two.js)
-
-### Day 3: Toboggan Trajectory
-
-[Part one (JS)](./day-3/solve-part-one.js) and [part two (JS)](./day-3/solve-part-two.js)
-
-### Day 4: Passport Processing
-
-[Part one (JS)](./day-4/solve-part-one.js) and [part two (JS)](./day-4/solve-part-two.js)
-
-### Day 5: Binary Boarding
-
-[Part one (JS)](./day-5/part-one.js) and [part two (JS)](./day-5/part-two.js)
-
-### Day 6: Custom Customs
-
-[Part one (JS)](./day-6/part-one.js) and [part two (JS)](./day-6/part-two.js)
+| Day | Name | Part One | Part Two |
+| --- | --- | --- | --- |
+| 01 | Report Repair | [Part one (JS)](./day-1/solve-part-one.js) | [part two (JS)](./day-1/solve-part-two.js) |
+| 02 | Password Philosophy | [Part one (JS)](./day-2/solve-part-one.js) | [part two (JS)](./day-2/solve-part-two.js) |
+| 03 | Toboggan Trajectory | [Part one (JS)](./day-3/solve-part-one.js) | [part two (JS)](./day-3/solve-part-two.js) |
+| 04 | Passport Processing | [Part one (JS)](./day-4/solve-part-one.js) | [part two (JS)](./day-4/solve-part-two.js) |
+| 05 | Binary Boarding | [Part one (JS)](./day-5/part-one.js) | [part two (JS)](./day-5/part-two.js) |
+| 06 | Custom Customs | [Part one (JS)](./day-6/part-one.js) | [part two (JS)](./day-6/part-two.js) |
+| 07 | Handy Haversacks | [Part one (JS)](./day-7/part-one.js) | [part two (JS)](./day-7/part-two.js) |
